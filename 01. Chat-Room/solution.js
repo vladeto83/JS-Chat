@@ -16,16 +16,16 @@ function solve() {
          return;
       }
 
-      // const space =  '&nbsp;';
+      const space =  '&nbsp;';
 
-      // var spaceCount = "";
-      // for (const char of currentMessage) {
+      var spaceCount = "";
+      for (const char of currentMessage) {
    
-      //    if (char !== ' ') {
-      //      break; 
-      //    }
-      //    spaceCount += space;
-      // }
+         if (char !== ' ') {
+           break; 
+         }
+         spaceCount += space;
+      }
 
       inputTextArea.value = '';
 
@@ -33,7 +33,7 @@ function solve() {
       let messageDiv = document.createElement("div");
       messageDiv.classList.add('message');
       messageDiv.classList.add('my-message')
-      messageDiv.innerText = currentMessage;  // (spaceCount + currentMessage);
+      messageDiv.innerHTML = (spaceCount + currentMessage);
       spaceCount = "";
 
 
